@@ -1,1 +1,97 @@
-Submetam suas respostas aqui. Apenas um integrante do grupo deve enviar!
+QUESTÃO (VENDEDOR) 1:
+
+
+#include <stdio.h>
+
+int main()
+{   
+    char nome[16];
+    double salario, vendas, resultado;
+    scanf(" %s", nome);
+    scanf("%lf%lf", &salario, &vendas);
+    
+    resultado = (vendas*0.15)+salario;
+    printf("TOTAL = R$ %.2lf", resultado);
+    
+    return 0;
+}
+
+
+
+QUESTÃO (GASOLINA) 2:
+
+#include <stdio.h>
+
+int main() {
+    int tempo, velocidade;
+    double distancia, litros;
+
+    scanf("%d %d", &tempo, &velocidade);
+
+    distancia = tempo * velocidade;
+
+    litros = distancia / 12.0;
+
+    printf("%.3lf\n", litros);
+
+    return 0;
+}
+
+
+
+
+QUESTÃO (VALORES ACEITOS) 3:
+
+#include <stdio.h>
+
+int main() {
+    int a, b, c, d;
+    scanf("%d%d%d%d", &a, &b, &c, &d);
+
+    if(b > c && d > a && (c+d) > (a+b)){
+        printf("valores aceitos");
+        }else{ 
+        printf("valores nao aceitos");
+    
+        }
+    return 0;
+}
+
+
+
+
+QUESTAO (NOTAS) 4:
+
+#include <stdio.h>
+
+int main() {
+    float n1, n2, n3, n4, media, exame, media_final;
+
+    scanf("%f %f %f %f", &n1, &n2, &n3, &n4);
+
+    media = (n1 * 2 + n2 * 3 + n3 * 4 + n4 * 1) / 10;
+
+    printf("Media: %.1f\n", media);
+
+    if (media >= 7.0) {
+        printf("Aluno aprovado.\n");
+    } else if (media < 5.0) {
+        printf("Aluno reprovado.\n");
+    } else {
+        printf("Aluno em exame.\n");
+
+        scanf("%f", &exame);
+        printf("Nota do exame: %.1f\n", exame);
+
+        media_final = (media + exame) / 2;
+
+        if (media_final >= 5.0) {
+            printf("Aluno aprovado.\n");
+        } else {
+            printf("Aluno reprovado.\n");
+        }
+
+    }
+
+    return 0;
+}
